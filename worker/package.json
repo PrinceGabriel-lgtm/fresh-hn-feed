@@ -1,0 +1,17 @@
+{
+  "name": "fresh-hn-feed-worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "tsc --noEmit -p tsconfig.json",
+    "dev": "wrangler dev --config wrangler.hn-feed.jsonc --test-scheduled",
+    "deploy": "wrangler deploy --config wrangler.hn-feed.jsonc"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260414.1",
+    "typescript": "^5.4.0",
+    "wrangler": "^4.87.0"
+  }
+}
+

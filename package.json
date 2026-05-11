@@ -1,0 +1,15 @@
+{
+  "name": "fresh-hn-feed",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Standalone Cloudflare Worker API for freshness-ranked Hacker News feeds.",
+  "scripts": {
+    "check": "npm --prefix worker run check",
+    "dev": "npm --prefix worker run dev",
+    "deploy": "npm --prefix worker run deploy"
+  },
+  "workspaces": [
+    "worker"
+  ]
+}
+

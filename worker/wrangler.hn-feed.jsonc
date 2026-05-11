@@ -1,0 +1,29 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "fresh-hn-feed",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-05-07",
+  "compatibility_flags": ["nodejs_compat_v2"],
+  "vars": {
+    "PRODUCT": "hn-feed"
+  },
+  "triggers": {
+    "crons": [
+      "*/15 * * * *"
+    ]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "fresh-hn-feed-db",
+      "database_id": "4c0f102d-f3c4-4405-82f3-9a40c2e58757"
+    }
+  ],
+  "observability": {
+    "logs": {
+      "enabled": true,
+      "invocation_logs": true
+    }
+  }
+}
+
